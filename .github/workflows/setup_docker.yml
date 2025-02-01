@@ -40,4 +40,3 @@ jobs:
           sudo docker pull ${{ secrets.docker_username }}/app1:latest
           sudo docker pull ${{ secrets.docker_username }}/app2:latest
           sudo docker stop $(docker ps -q) || true
-          sudo docker-compose up -d
