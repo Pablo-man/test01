@@ -5,8 +5,10 @@ services:
     image: pamendeza/app1:latest
     ports:
       - "3001:3001"
+    restart: always  # Se reiniciará si falla
 
   app02:
     image: pamendeza/app2:latest
     ports:
-      - "4000:4000"
+      - "4000:4000"  # Usa 4000 en lugar de 3002
+    restart: always  # Se reiniciará si falla
