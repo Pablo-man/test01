@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  app01:
+    image: app01:latest
+    ports:
+      - "3001:3001"
+
+  app02:
+    image: app02:latest
+    ports:
+      - "3002:3002"
