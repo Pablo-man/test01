@@ -9,4 +9,4 @@ services:
   app02:
     image: pamendeza/app2:latest
     ports:
-      - "3002:3002"
+      - "4000:4000"
