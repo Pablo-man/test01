@@ -27,6 +27,6 @@ jobs:
             echo "ERROR: Invalid repository name."
             exit 1
           fi
-          DOCKERFILE_PATH="./app01/Dockerfile"
-          CONTEXT_PATH="./app01"
+          DOCKERFILE_PATH="./${{ secrets.repository_name }}/Dockerfile"
+          CONTEXT_PATH="./${{ secrets.repository_name }}"
           docker buildx build --platform linux/amd64 --build-arg BUILDKIT_INLINE_CACHE=1 -f "$DOCKERFILE_PATH" -t ${{ secrets.docker_username }}/$REPO_NAME:latest "$CONTEXT_PATH" --push
