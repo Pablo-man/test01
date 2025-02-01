@@ -9,8 +9,6 @@ on:
         required: true
       ec2_key:
         required: true
-      repository_name:
-        required: true
 
 jobs:
   connect_update:
