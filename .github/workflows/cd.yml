@@ -20,7 +20,7 @@ jobs:
       repository_name: ${{ secrets.DOCKER_REPOSITORY_NAME_APP2 }}
 
   ssh-connect-ec2-QA01:
-    needs: ["login-and-pull-qa", "login-and-pull-main"]
+    needs: login-and-pull-qa
     uses: ./.github/workflows/setup_docker.yml
     secrets:
       ec2_host: ${{ secrets.EC2_HOST_APPTEST }}
