@@ -2,11 +2,11 @@ version: '3.8'
 
 services:
   app01:
-    image: pamendeza/app01:latest
+    image: pamendeza/app1:latest
     ports:
       - "3001:3001"
 
   app02:
-    image: pamendeza/app02:latest
+    image: pamendeza/app2:latest
     ports:
       - "3002:3002"
