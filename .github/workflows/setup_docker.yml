@@ -32,8 +32,7 @@ jobs:
           echo "${{ secrets.ec2_key }}" > private_key.pem
           chmod 600 private_key.pem
           scp -o StrictHostKeyChecking=no -i private_key.pem docker-compose.yml ubuntu@${{ secrets.ec2_host }}:/home/ubuntu/
-          rm -f private_key.pem 
-
+          rm -f private_key.pem
 
           if ! command -v docker &> /dev/null; then
             sudo apt update
